@@ -1,0 +1,8 @@
+FROM node:6.14
+WORKDIR /opt/airsonos
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get install -y git avahi-daemon avahi-discover libnss-mdns libavahi-compat-libdnssd-dev
+RUN npm install airsonos -g
+COPY ./helper.js /usr/local/lib/node_modules/airsonos/node_modules/nodetunes/lib/helper.js
+CMD service dbus start && service avahi-daemon start && airsonos
