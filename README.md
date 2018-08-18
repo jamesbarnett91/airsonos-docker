@@ -20,5 +20,5 @@ $ docker run -d --name airsonos --network=host jbarnett/airsonos:arm32v7
 ```
 
 ## Note
-I didn't bother trying to optimise the image size and as a result they're around 800mb. The base image is Debian Jessie which you may already have a cached layer for anyway.
+I didn't bother trying to optimise the image size and as a result they're around 400mb. The base image is Debian Jessie which you may already have a cached layer for anyway.
 I might rebuild them using Alpine at some point.
